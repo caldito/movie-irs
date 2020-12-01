@@ -5,6 +5,8 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -24,15 +26,15 @@ public class Scraper {
 		for(Film film : films) {
 			url =film.getLink();
 			extractDate(film);
-			getSummary(url, film);
-			getSummaryItem(url, film);
+			//getSummary(url, film);
+			//getSummaryItem(url, film);
 		}
-		listToJson("films.json");
+		listToJson("../films.json");
 
 	}
 
 	private static void readCSV() throws IOException{
-		CSVReader reader = new CSVReader(new FileReader("data.csv"));
+		CSVReader reader = new CSVReader(new FileReader("../data.csv"));
         List<String[]> lines = reader.readAll();
         lines.remove(0); 
         
@@ -40,7 +42,12 @@ public class Scraper {
         	int id = Integer.parseInt(d[0]);
         	String link = d[1];
         	String title = d[2];
-        	double score = Double.parseDouble(d[3]);
+			double score;
+			if (d[3] == null || d[3].equals("")){
+				score = 0;
+			}else{
+				score = Double.parseDouble(d[3]);
+			}
         	String[]genres = d[4].split("|");
         	String poster = d[5];
         	
