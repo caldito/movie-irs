@@ -4,18 +4,18 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.*;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import com.google.gson.*;
 
 import com.opencsv.CSVReader;
 
 public class Scraper {
 	private static List<Film>films = new ArrayList<Film>();
-	
-	public static final String URL_WIKIE = "https://www.imdb.com/title/tt0111161/";
 
 	public static void main(String[] args) throws IOException {
 		readCSV();
@@ -27,12 +27,14 @@ public class Scraper {
 			getSummary(url, film);
 			getSummaryItem(url, film);
 		}
+		listToJson("films.json");
+
 	}
 
 	private static void readCSV() throws IOException{
 		CSVReader reader = new CSVReader(new FileReader("data.csv"));
         List<String[]> lines = reader.readAll();
-        
+        lines.remove(0); 
         
         for(String[] d : lines) {
         	int id = Integer.parseInt(d[0]);
@@ -133,5 +135,16 @@ public class Scraper {
 			System.out.println("\t:" + elem.text());
 		}
 		System.out.println();
+	}
+
+	public static void listToJson(String output){
+		Gson gson = new Gson();
+		String json = gson.toJson(films);
+		try {
+			PrintWriter out = new PrintWriter(output);
+			out.println(json);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 }
