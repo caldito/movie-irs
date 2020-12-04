@@ -48,7 +48,7 @@ public class Scraper {
 			}else{
 				score = Double.parseDouble(d[3]);
 			}
-        	String[]genres = d[4].split("|");
+        	String[]genres = d[4].split("\\|");
         	String poster = d[5];
         	
         	films.add(new Film(id,link,title,score, genres, poster));
@@ -57,12 +57,16 @@ public class Scraper {
 	}
 	
 	private static void extractDate(Film film) {
-		String str = film.getTitle();
-		int year = Integer.parseInt(str.substring(str.indexOf("(")+1,str.indexOf(")")));
-		String newTitle = str.substring(0,str.indexOf("(")-1);
-		
-		film.setTitle(newTitle);
-		film.setYear(year);
+		try{
+			String str = film.getTitle();
+			int year = Integer.parseInt(str.substring(str.indexOf("(")+1,str.indexOf(")")));
+			String newTitle = str.substring(0,str.indexOf("(")-1);
+			
+			film.setTitle(newTitle);
+			film.setYear(year);
+		}catch( Exception exception){
+			//if fails doesn't go to list
+		}
 	}
 	
 	/**

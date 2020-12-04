@@ -107,4 +107,18 @@ public class Film{
 	public void setYear(int year) {
 		this.year = year;
 	}
+
+	@java.lang.Override
+	public java.lang.String toString() {
+		return "Film{" +
+				"id=" + id +
+				", link='" + link + '\'' +
+				", title='" + title + '\'' +
+				", score=" + score +
+				", genres=" + java.util.Arrays.toString(genres) +
+				", poster='" + poster + '\'' +
+				", actors=" + java.util.Arrays.toString(actors) +
+				", year=" + year +
+				'}';
+	}
 }
