@@ -7,7 +7,7 @@ public class Film{
     double score;
     String[]genres;
     String poster;
-
+    String summary;
     //
     String[]actors;
     int year;
@@ -28,6 +28,13 @@ public class Film{
 
     }
 
+	public String getSummary() {
+		return summary;
+	}
+
+	public void setSummary(String summary) {
+		this.summary = summary;
+	}
 
 	public int getId() {
 		return id;
