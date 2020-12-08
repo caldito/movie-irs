@@ -28,6 +28,7 @@ public class Scraper {
 			extractDate(film);
 			getSummary(url, film);
 			//getSummaryItem(url, film);
+			getActors(url,film);
 		}
 		listToJson("../films.json");
 
@@ -98,6 +99,23 @@ public class Scraper {
 			System.out.println("\t:" + elem.childNode(0).toString());
 		}
 		System.out.println();
+	}
+
+	public static void getActors(String url, Film film) throws IOException{
+		List<String> actorsList = new ArrayList<>();
+		Document doc = Jsoup.connect(url).get();
+		Element table = doc.select("table.cast_list").get(0);
+		Elements rows = table.select("tr");
+		for (Element row:rows) {
+			Elements cols = row.select("td");
+			try{
+				actorsList.add(cols.get(1).select("a").text());
+			} catch (IndexOutOfBoundsException e){
+				//Skip this line
+			}
+		}
+		String[] actors = actorsList.toArray(new String[0]);
+		film.setActors(actors);
 	}
 	
 	/**
