@@ -32,6 +32,7 @@ public class Scraper {
 			getSummary(url, film);
 			getActors(url,film);
 			System.out.println(progress++);
+			listToJson("../films.json");
 		}
 		listToJson("../films.json");
 
@@ -99,7 +100,7 @@ public class Scraper {
 				}
 			}
 		}
-		String[] actors = actorsList.toArray(new String[0]);
+		String[] actors = actorsList.toArray(new String[0]);		
 		film.setActors(actors);
 	}
 	
@@ -139,7 +140,7 @@ public class Scraper {
 		Gson gson = new Gson();
 		String json = gson.toJson(films);
 		try {
-			PrintWriter out = new PrintWriter(output);
+			PrintWriter out = new PrintWriter(new FileOutputStream(output, false));
 			out.println(json);
 			out.close();
 		} catch (Exception e) {
