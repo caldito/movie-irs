@@ -27,7 +27,7 @@ public class Scraper {
 			url =film.getLink();
 			extractDate(film);
 			getSummary(url, film);
-			//getSummaryItem(url, film);
+			getActors(url,film);
 		}
 		listToJson("../films.json");
 
@@ -68,37 +68,23 @@ public class Scraper {
 			//if fails doesn't go to list
 		}
 	}
-	
-	/**
-	 * Este método recupera todos los href de una página web y los muestra por pantalla
-	 * @param url
-	 * @throws IOException
-	 */
-/*	public static void getHRef(String url, Film film) throws IOException{
+
+	public static void getActors(String url, Film film) throws IOException{
+		List<String> actorsList = new ArrayList<>();
 		Document doc = Jsoup.connect(url).get();
-		System.out.println("a href from:\t" + doc.title());
-		Elements lst = doc.select("a[href]");
-		for (Element elem:lst) {
-			System.out.println("\t:" + elem.text());
+		Element table = doc.select("table.cast_list").get(0);
+		Elements rows = table.select("tr");
+		for (Element row:rows) {
+			Elements cols = row.select("td");
+			try{
+				actorsList.add(cols.get(1).select("a").text());
+			} catch (IndexOutOfBoundsException e){
+				//Skip this line
+			}
 		}
-		System.out.println();
-	}*/
-	
-	/**
-	 * Este método recupera todas las etiquetas h4 de una página web y las muestra por pantalla
-	 * @param url
-	 * @throws IOException
-	 */
-/*	public static void getH4(String url, Film film) throws IOException{
-		Document doc = Jsoup.connect(url).get();
-		System.out.println("H4 from:\t" + doc.title());
-		//obtenemos todas las etiquetas h4
-		Elements lst = doc.select("h4");
-		for (Element elem:lst) {
-			System.out.println("\t:" + elem.childNode(0).toString());
-		}
-		System.out.println();
-	}*/
+		String[] actors = actorsList.toArray(new String[0]);
+		film.setActors(actors);
+	}
 	
 	/**
 	 * Este método recupera todas las etiquetas div summary_tex de una página web y las muestra por pantalla
@@ -122,23 +108,6 @@ public class Scraper {
 			film.setSummary(fullSummary.select("p").get(0).text());
 		}
 	}
-	
-	
-	/**
-	 * Este método recupera todas las etiquetas div credit_summary_item de una página web y las muestra por pantalla
-	 * @param url
-	 * @throws IOException
-	 */
-/*	public static void getSummaryItem(String url, Film film) throws IOException{
-		Document doc = Jsoup.connect(url).get();
-		System.out.println("Items from:\t" + doc.title());
-		//obtenemos el div credit_summary_item
-		Elements lst = doc.select("div.credit_summary_item");
-		for (Element elem:lst) {
-			System.out.println("\t:" + elem.text());
-		}
-		System.out.println();
-	}*/
 
 	public static void listToJson(String output){
 		Gson gson = new Gson();
