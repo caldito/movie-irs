@@ -74,7 +74,7 @@ public class Scraper {
 	 * @param url
 	 * @throws IOException
 	 */
-	public static void getHRef(String url, Film film) throws IOException{
+/*	public static void getHRef(String url, Film film) throws IOException{
 		Document doc = Jsoup.connect(url).get();
 		System.out.println("a href from:\t" + doc.title());
 		Elements lst = doc.select("a[href]");
@@ -82,14 +82,14 @@ public class Scraper {
 			System.out.println("\t:" + elem.text());
 		}
 		System.out.println();
-	}
+	}*/
 	
 	/**
 	 * Este método recupera todas las etiquetas h4 de una página web y las muestra por pantalla
 	 * @param url
 	 * @throws IOException
 	 */
-	public static void getH4(String url, Film film) throws IOException{
+/*	public static void getH4(String url, Film film) throws IOException{
 		Document doc = Jsoup.connect(url).get();
 		System.out.println("H4 from:\t" + doc.title());
 		//obtenemos todas las etiquetas h4
@@ -98,7 +98,7 @@ public class Scraper {
 			System.out.println("\t:" + elem.childNode(0).toString());
 		}
 		System.out.println();
-	}
+	}*/
 	
 	/**
 	 * Este método recupera todas las etiquetas div summary_tex de una página web y las muestra por pantalla
@@ -109,11 +109,18 @@ public class Scraper {
 		Document doc = Jsoup.connect(url).get();
 		System.out.println("Summary from:\t" + doc.title());
 		//obtenemos el div summary_text
+
 		Elements lst = doc.select("div.summary_text");
-		for (Element elem:lst) {
-			System.out.println("\t:" + elem.text());
+		String summary = lst.get(0).text();
+		String linkFull = lst.select("a").attr("abs:href");
+		 
+		if(linkFull.equals("") || !linkFull.contains("title")) {
+			film.setSummary(summary);
+		}else{
+			Document docSum = Jsoup.connect(linkFull).get();
+            Elements fullSummary = docSum.select("li.ipl-zebra-list__item");
+			film.setSummary(fullSummary.select("p").get(0).text());
 		}
-		System.out.println();
 	}
 	
 	
@@ -122,7 +129,7 @@ public class Scraper {
 	 * @param url
 	 * @throws IOException
 	 */
-	public static void getSummaryItem(String url, Film film) throws IOException{
+/*	public static void getSummaryItem(String url, Film film) throws IOException{
 		Document doc = Jsoup.connect(url).get();
 		System.out.println("Items from:\t" + doc.title());
 		//obtenemos el div credit_summary_item
@@ -131,7 +138,7 @@ public class Scraper {
 			System.out.println("\t:" + elem.text());
 		}
 		System.out.println();
-	}
+	}*/
 
 	public static void listToJson(String output){
 		Gson gson = new Gson();
