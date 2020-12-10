@@ -21,19 +21,27 @@ public class Scraper {
 	private static String log_file ="../logs.txt";
 
 	public static void main(String[] args) throws IOException {
-		readCSV();
-		
-		String url;
-		int progress = 0;
 
-		for(Film film : films) {
-			url =film.getLink();
-			extractDate(film);
-			getSummary(url, film);
-			getActors(url,film);
-			System.out.println(progress++);
+		readCSV();
+		films.parallelStream().forEach((film) -> {
+			try {
+				extractDate(film);
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+			try {
+				getSummary(film.getLink(), film);
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+			try {
+				getActors(film.getLink(),film);
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+
 			listToJson("../films.json");
-		}
+		});
 		listToJson("../films.json");
 
 	}
@@ -71,7 +79,7 @@ public class Scraper {
 			film.setYear(year);
 		}catch( Exception exception){
 			try {
-				PrintWriter out = new PrintWriter(Scraper.log_file);
+				PrintWriter out = new PrintWriter(new FileWriter(Scraper.log_file, true));
 				out.println("Error not Indexed Date: "+film.getLink());
 				out.close();
 			} catch (Exception err) {
@@ -81,18 +89,25 @@ public class Scraper {
 	}
 
 	public static void getActors(String url, Film film) throws IOException{
+		url = url + "/fullcredits?ref_=tt_cl_sm#cast";
 		List<String> actorsList = new ArrayList<>();
 		Document doc = Jsoup.connect(url).get();
+		if (doc.select("table.cast_list").size() == 0){
+			return;
+		}
 		Element table = doc.select("table.cast_list").get(0);
 		Elements rows = table.select("tr");
+
 		for (Element row:rows) {
 			Elements cols = row.select("td");
 			try{
-				actorsList.add(cols.get(1).select("a").text());
+				if (cols.size() == 4){
+					actorsList.add(cols.get(1).select("a").text());
+				}
 			} catch (Exception e){
 				//Skip this line and print to logs file
 				try {
-					PrintWriter out = new PrintWriter(Scraper.log_file);
+					PrintWriter out = new PrintWriter(new FileWriter(Scraper.log_file, true));
 					out.println("Error not Indexed Actors: "+film.getLink());
 					out.close();
 				} catch (Exception err) {
@@ -100,7 +115,7 @@ public class Scraper {
 				}
 			}
 		}
-		String[] actors = actorsList.toArray(new String[0]);		
+		String[] actors = actorsList.toArray(new String[0]);
 		film.setActors(actors);
 	}
 	
@@ -127,7 +142,7 @@ public class Scraper {
 			}
 		}catch(Exception e){
 			try {
-				PrintWriter out = new PrintWriter(Scraper.log_file);
+				PrintWriter out = new PrintWriter(new FileWriter(Scraper.log_file, true));
 				out.println("Error not Indexed Summary: "+film.getLink());
 				out.close();
 			} catch (Exception err) {
@@ -140,7 +155,8 @@ public class Scraper {
 		Gson gson = new Gson();
 		String json = gson.toJson(films);
 		try {
-			PrintWriter out = new PrintWriter(new FileOutputStream(output, false));
+			//PrintWriter out = new PrintWriter(new FileOutputStream(output, false));
+			PrintWriter out = new PrintWriter(output);
 			out.println(json);
 			out.close();
 		} catch (Exception e) {
