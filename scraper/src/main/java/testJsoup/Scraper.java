@@ -18,6 +18,7 @@ import com.opencsv.CSVReader;
 
 public class Scraper {
 	private static List<Film>films = new ArrayList<Film>();
+	private static String log_file ="../logs.txt";
 
 	public static void main(String[] args) throws IOException {
 		readCSV();
@@ -65,7 +66,13 @@ public class Scraper {
 			film.setTitle(newTitle);
 			film.setYear(year);
 		}catch( Exception exception){
-			//if fails doesn't go to list
+			try {
+				PrintWriter out = new PrintWriter(Scrapper.log_file);
+				out.println("Error not Indexed Date: "+film.getlink());
+				out.close();
+			} catch (Exception err) {
+				System.out.println(err);
+			}
 		}
 	}
 
@@ -78,8 +85,15 @@ public class Scraper {
 			Elements cols = row.select("td");
 			try{
 				actorsList.add(cols.get(1).select("a").text());
-			} catch (IndexOutOfBoundsException e){
-				//Skip this line
+			} catch (Exception e){
+				//Skip this line and print to logs file
+				try {
+					PrintWriter out = new PrintWriter(Scrapper.log_file);
+					out.println("Error not Indexed Actors: "+film.getlink());
+					out.close();
+				} catch (Exception err) {
+					System.out.println(err);
+				}
 			}
 		}
 		String[] actors = actorsList.toArray(new String[0]);
@@ -92,20 +106,29 @@ public class Scraper {
 	 * @throws IOException
 	 */
 	public static void getSummary(String url, Film film) throws IOException{
-		Document doc = Jsoup.connect(url).get();
-		System.out.println("Summary from:\t" + doc.title());
-		//obtenemos el div summary_text
+		try{
+			Document doc = Jsoup.connect(url).get();
+			//obtenemos el div summary_text
 
-		Elements lst = doc.select("div.summary_text");
-		String summary = lst.get(0).text();
-		String linkFull = lst.select("a").attr("abs:href");
-		 
-		if(linkFull.equals("") || !linkFull.contains("title")) {
-			film.setSummary(summary);
-		}else{
-			Document docSum = Jsoup.connect(linkFull).get();
-            Elements fullSummary = docSum.select("li.ipl-zebra-list__item");
-			film.setSummary(fullSummary.select("p").get(0).text());
+			Elements lst = doc.select("div.summary_text");
+			String summary = lst.get(0).text();
+			String linkFull = lst.select("a").attr("abs:href");
+			
+			if(linkFull.equals("") || !linkFull.contains("title")) {
+				film.setSummary(summary);
+			}else{
+				Document docSum = Jsoup.connect(linkFull).get();
+        	    Elements fullSummary = docSum.select("li.ipl-zebra-list__item");
+				film.setSummary(fullSummary.select("p").get(0).text());
+			}
+		}catch(Exception e){
+			try {
+				PrintWriter out = new PrintWriter(Scrapper.log_file);
+				out.println("Error not Indexed Summary: "+film.getlink());
+				out.close();
+			} catch (Exception err) {
+				System.out.println(err);
+			}
 		}
 	}
 
@@ -115,6 +138,7 @@ public class Scraper {
 		try {
 			PrintWriter out = new PrintWriter(output);
 			out.println(json);
+			out.close();
 		} catch (Exception e) {
 			System.out.println(e);
 		}
