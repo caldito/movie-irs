@@ -24,11 +24,14 @@ public class Scraper {
 		readCSV();
 		
 		String url;
+		int progress = 0;
+
 		for(Film film : films) {
 			url =film.getLink();
 			extractDate(film);
 			getSummary(url, film);
 			getActors(url,film);
+			System.out.println(progress++);
 		}
 		listToJson("../films.json");
 
@@ -67,8 +70,8 @@ public class Scraper {
 			film.setYear(year);
 		}catch( Exception exception){
 			try {
-				PrintWriter out = new PrintWriter(Scrapper.log_file);
-				out.println("Error not Indexed Date: "+film.getlink());
+				PrintWriter out = new PrintWriter(Scraper.log_file);
+				out.println("Error not Indexed Date: "+film.getLink());
 				out.close();
 			} catch (Exception err) {
 				System.out.println(err);
@@ -88,8 +91,8 @@ public class Scraper {
 			} catch (Exception e){
 				//Skip this line and print to logs file
 				try {
-					PrintWriter out = new PrintWriter(Scrapper.log_file);
-					out.println("Error not Indexed Actors: "+film.getlink());
+					PrintWriter out = new PrintWriter(Scraper.log_file);
+					out.println("Error not Indexed Actors: "+film.getLink());
 					out.close();
 				} catch (Exception err) {
 					System.out.println(err);
@@ -123,8 +126,8 @@ public class Scraper {
 			}
 		}catch(Exception e){
 			try {
-				PrintWriter out = new PrintWriter(Scrapper.log_file);
-				out.println("Error not Indexed Summary: "+film.getlink());
+				PrintWriter out = new PrintWriter(Scraper.log_file);
+				out.println("Error not Indexed Summary: "+film.getLink());
 				out.close();
 			} catch (Exception err) {
 				System.out.println(err);
