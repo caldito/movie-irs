@@ -132,8 +132,9 @@ public class Scraper {
 			Elements lst = doc.select("div.summary_text");
 			String summary = lst.get(0).text();
 			String linkFull = lst.select("a").attr("abs:href");
-			
-			if(linkFull.equals("") || !linkFull.contains("title")) {
+
+			//if contains the word plotsummary it means is a link to the whole summary
+			if(linkFull.equals("") || !linkFull.contains("plotsummary")) {
 				film.setSummary(summary);
 			}else{
 				Document docSum = Jsoup.connect(linkFull).get();
