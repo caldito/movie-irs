@@ -57,7 +57,7 @@ public class Scraper {
         	String title = d[2];
 			double score;
 			if (d[3] == null || d[3].equals("")){
-				score = 0;
+				score = -1.0;
 			}else{
 				score = Double.parseDouble(d[3]);
 			}
@@ -80,7 +80,8 @@ public class Scraper {
 		}catch( Exception exception){
 			try {
 				PrintWriter out = new PrintWriter(new FileWriter(Scraper.log_file, true));
-				out.println("Error not Indexed Date: "+film.getLink());
+				film.setYear(-1);
+				out.println("Error not Indexed Date: (added as -1)"+film.getLink());
 				out.close();
 			} catch (Exception err) {
 				System.out.println(err);
