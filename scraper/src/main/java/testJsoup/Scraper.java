@@ -57,7 +57,7 @@ public class Scraper {
         	String title = d[2];
 			double score;
 			if (d[3] == null || d[3].equals("")){
-				score = 0;
+				score = -1.0;
 			}else{
 				score = Double.parseDouble(d[3]);
 			}
@@ -80,7 +80,8 @@ public class Scraper {
 		}catch( Exception exception){
 			try {
 				PrintWriter out = new PrintWriter(new FileWriter(Scraper.log_file, true));
-				out.println("Error not Indexed Date: "+film.getLink());
+				film.setYear(-1);
+				out.println("Error not Indexed Date: (added as -1)"+film.getLink());
 				out.close();
 			} catch (Exception err) {
 				System.out.println(err);
@@ -132,8 +133,9 @@ public class Scraper {
 			Elements lst = doc.select("div.summary_text");
 			String summary = lst.get(0).text();
 			String linkFull = lst.select("a").attr("abs:href");
-			
-			if(linkFull.equals("") || !linkFull.contains("title")) {
+
+			//if contains the word plotsummary it means is a link to the whole summary
+			if(linkFull.equals("") || !linkFull.contains("plotsummary")) {
 				film.setSummary(summary);
 			}else{
 				Document docSum = Jsoup.connect(linkFull).get();
