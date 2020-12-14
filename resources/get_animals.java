@@ -22,7 +22,7 @@ public static void main(String[] args) throws IOException {
     }
 public static void getAnimals() throws IOException{
 		url = "https://www.madridteacher.com/Activities/Files/animals-vocabulary-list-print.htm"
-		List<String> AnimalsList = new ArrayList<>();
+		List<String> animalsList = new ArrayList<>();
 		Document doc = Jsoup.connect(url).get();
 		if (doc.select("table.cast_list").size() == 0){
 			return;
@@ -34,7 +34,7 @@ public static void getAnimals() throws IOException{
 			Elements cols = row.select("td");
 			try{
 				if (cols.size() == 4){
-					actorsList.add(cols.get(1).select("a").text());
+					animalsList.add(cols.get(1).select("a").text());
 				}
 			} catch (Exception e){
 				//Skip this line and print to logs file
