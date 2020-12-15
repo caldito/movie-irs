@@ -1,0 +1,17 @@
+GET /_search?size=10
+{
+  "query": { 
+    "bool": { 
+      "must": [
+        { "match":{
+                "summary" : "spain spanish belize guatemala honduras mexico nicaragua panama argentina bolivia brazil chile colombia ecuador guyana paraguay peru suriname uruguay venezuela haiti cuba bahamas aruba barbados"
+        }}
+      ],
+      "should" : [
+          { "match":{
+                "summary" : "latin family people dictator dictatorship trip holiday revolution culture inquisition invasion drug turist visit immigrant emigrant city love relationship war conflict"
+        }}
+        ]
+    }
+  }
+}
