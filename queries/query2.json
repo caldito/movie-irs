@@ -1,0 +1,19 @@
+GET /_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "terms": {
+          "genres": ["adventure"]
+        }}
+      ]
+    }
+  },
+  "aggs": {
+    "by_actor": {
+      "terms": {
+        "field": "actors"
+      }
+    }
+  }
+}

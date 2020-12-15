@@ -1,0 +1,19 @@
+GET /_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "terms": {
+          "genres": ["crime"]
+        }}
+      ]
+    }
+  },
+  "aggs": {
+    "films_per_year": {
+      "terms": {
+        "field": "year"
+      }
+    }
+  }
+}
