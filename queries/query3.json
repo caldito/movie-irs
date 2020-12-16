@@ -1,4 +1,4 @@
-GET /_search
+GET /films/_search?size=10
 {
   "query": {
     "bool": {
