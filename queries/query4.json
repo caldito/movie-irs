@@ -9,7 +9,7 @@ GET /films/_search?size=10
       ],
       "should" : [
           { "match":{
-                "summary" : "latin family people dictator dictatorship trip holiday revolution culture inquisition invasion drug turist visit immigrant emigrant city love relationship war conflict"
+                "summary" : "latin family people dictator dictatorship trip holiday revolution culture inquisition invasion drug tourist visit immigrant emigrant city love relationship war conflict"
         }}
         ]
     }
