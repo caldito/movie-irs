@@ -1,0 +1,67 @@
+{
+    "took" : 1,
+    "timed_out" : false,
+    "_shards" : {
+      "total" : 1,
+      "successful" : 1,
+      "skipped" : 0,
+      "failed" : 0
+    },
+    "hits" : {
+      "total" : {
+        "value" : 3819,
+        "relation" : "eq"
+      },
+      "max_score" : null,
+      "hits" : [ ]
+    },
+    "aggregations" : {
+      "by_actor" : {
+        "doc_count_error_upper_bound" : 0,
+        "sum_other_doc_count" : 158824,
+        "buckets" : [
+          {
+            "key" : "Frank Welker",
+            "doc_count" : 118
+          },
+          {
+            "key" : "Jeff Bennett",
+            "doc_count" : 78
+          },
+          {
+            "key" : "Jim Cummings",
+            "doc_count" : 56
+          },
+          {
+            "key" : "Bob Bergen",
+            "doc_count" : 53
+          },
+          {
+            "key" : "Fred Tatasciore",
+            "doc_count" : 50
+          },
+          {
+            "key" : "Dee Bradley Baker",
+            "doc_count" : 49
+          },
+          {
+            "key" : "Jess Harnell",
+            "doc_count" : 48
+          },
+          {
+            "key" : "Rob Paulsen",
+            "doc_count" : 47
+          },
+          {
+            "key" : "Sherry Lynn",
+            "doc_count" : 47
+          },
+          {
+            "key" : "Christopher Lee",
+            "doc_count" : 46
+          }
+        ]
+      }
+    }
+  }
+  

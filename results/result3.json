@@ -1,0 +1,457 @@
+{
+    "took" : 2,
+    "timed_out" : false,
+    "_shards" : {
+      "total" : 1,
+      "successful" : 1,
+      "skipped" : 0,
+      "failed" : 0
+    },
+    "hits" : {
+      "total" : {
+        "value" : 5253,
+        "relation" : "eq"
+      },
+      "max_score" : 1.0,
+      "hits" : [
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "CkImbHYBdcQizbUJwz65",
+          "_score" : 1.0,
+          "_source" : {
+            "id" : 11565,
+            "link" : "http://www.imdb.com/title/tt0011565",
+            "title" : "The Penalty",
+            "score" : 7.5,
+            "genres" : [
+              "Crime",
+              "Drama",
+              "Horror"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMjM0NTExNjQzNF5BMl5BanBnXkFtZTgwMjMyMDU4MTE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "summary" : "A deformed criminal mastermind plans to loot the city of San Francisco as well as revenge himself on the doctor who mistakenly amputated his legs.",
+            "actors" : [
+              "Charles Clary",
+              "Doris Pawn",
+              "Jim Mason",
+              "Lon Chaney",
+              "Milton Ross",
+              "Ethel Grey Terry",
+              "Kenneth Harlan",
+              "Claire Adams",
+              "Montgomery Carlyle",
+              "Michael Dark",
+              "Cesare Gravina",
+              "Lee Phelps",
+              "Madlaine Traverse",
+              "Edouard Trebaol",
+              "Clarence Wilson"
+            ],
+            "year" : 1920
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "EkImbHYBdcQizbUJwz66",
+          "_score" : 1.0,
+          "_source" : {
+            "id" : 11904,
+            "link" : "http://www.imdb.com/title/tt0011904",
+            "title" : "The Ace of Hearts",
+            "score" : 7.0,
+            "genres" : [
+              "Crime",
+              "Drama",
+              "Mystery"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkwOTUyNDk1N15BMl5BanBnXkFtZTYwODI3MzI3._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "summary" : "A romantic rivalry among members of a secret society becomes even tenser when one of the men is assigned to carry out an assassination.",
+            "actors" : [
+              "Lon Chaney",
+              "Leatrice Joy",
+              "John Bowers",
+              "Hardee Kirkland",
+              "Raymond Hatton",
+              "Edwin Wallock",
+              "Roy Laidlaw",
+              "Cullen Landis"
+            ],
+            "year" : 1921
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "LUImbHYBdcQizbUJwz66",
+          "_score" : 1.0,
+          "_source" : {
+            "id" : 12651,
+            "link" : "http://www.imdb.com/title/tt0012651",
+            "title" : "The Haunted Castle",
+            "score" : 6.3,
+            "genres" : [
+              "Crime",
+              "Drama",
+              "Horror"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwNTQ2Njg3M15BMl5BanBnXkFtZTgwNjI1MTA5MTE@._V1_UY268_CR91,0,182,268_AL_.jpg",
+            "summary" : "In the castle Vogeloed, a few aristocrats are awaiting baroness Safferstätt. But first count Oetsch invites himself.. Everyone thinks he murdered his brother, baroness Safferstat's first husband, three years ago. So he is rather undesirable. But Oetsch stays; arguing he is not the murderer and will find the real one...",
+            "actors" : [
+              "Arnold Korff",
+              "Lulu Kyser-Korff",
+              "Lothar Mehnert",
+              "Paul Hartmann",
+              "Paul Bildt",
+              "Olga Tschechowa",
+              "Victor Bluetner",
+              "Hermann Vallentin",
+              "Julius Falkenstein",
+              "Robert Leffler",
+              "Walter Kurt Kuhle",
+              "Loni Nest",
+              "Ursula Nest",
+              "Georg Zawatzky"
+            ],
+            "year" : 1921
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "OUImbHYBdcQizbUJwz66",
+          "_score" : 1.0,
+          "_source" : {
+            "id" : 13086,
+            "link" : "http://www.imdb.com/title/tt0013086",
+            "title" : "Dr. Mabuse: The Gambler",
+            "score" : 7.9,
+            "genres" : [
+              "Crime",
+              "Mystery",
+              "Thriller"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEwMzk5MTI1MV5BMl5BanBnXkFtZTgwNDY1MTA5MTE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "summary" : "Arch-criminal Dr. Mabuse sets out to make a fortune and run Berlin. Detective Wenk sets out to stop him.",
+            "actors" : [
+              "Rudolf Klein-Rogge",
+              "Aud Egede-Nissen",
+              "Gertrude Welcker",
+              "Alfred Abel",
+              "Bernhard Goetzke",
+              "Paul Richter",
+              "Robert Forster-Larrinaga",
+              "Hans Adalbert Schlettow",
+              "Georg John",
+              "Károly Huszár",
+              "Grete Berger",
+              "Julius Falkenstein",
+              "Lydia Potechina",
+              "Julius E. Herrmann",
+              "Max Adalbert",
+              "Anita Berber",
+              "Paul Biensfeldt",
+              "Gustav Botz",
+              "Julietta Brandt",
+              "Lil Dagover",
+              "Heinrich Gotho",
+              "Leonhard Haskel",
+              "Erner Huebsch",
+              "Gottfried Huppertz",
+              "Hans Junkermann",
+              "Adolf Klein",
+              "Erich Pabst",
+              "Edgar Pauly",
+              "Karl Platen",
+              "Auguste Prasch-Grevenberg",
+              "Adele Sandrock",
+              "Willy Schmidt-Gentner",
+              "Hans Sternberg",
+              "Olaf Storm",
+              "Oscar Stribolt",
+              "Erich Walter"
+            ],
+            "year" : 1922
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "gEImbHYBdcQizbUJwz66",
+          "_score" : 1.0,
+          "_source" : {
+            "id" : 15202,
+            "link" : "http://www.imdb.com/title/tt0015202",
+            "title" : "The Hands of Orlac",
+            "score" : 7.1,
+            "genres" : [
+              "Crime",
+              "Horror",
+              "Mystery"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU3MzIxNDk0N15BMl5BanBnXkFtZTgwMzQyNTE1MjE@._V1_UY268_CR4,0,182,268_AL_.jpg",
+            "summary" : "A world-famous pianist loses both hands in an accident. When new hands are grafted on, he doesn't know they once belonged to a murderer.",
+            "actors" : [
+              "Conrad Veidt",
+              "Alexandra Sorina",
+              "Fritz Strassny",
+              "Paul Askonas",
+              "Carmen Cartellieri",
+              "Hans Homma",
+              "Fritz Kortner"
+            ],
+            "year" : 1924
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "okImbHYBdcQizbUJwz66",
+          "_score" : 1.0,
+          "_source" : {
+            "id" : 16201,
+            "link" : "http://www.imdb.com/title/tt0016201",
+            "title" : "Parisian Love",
+            "score" : 6.2,
+            "genres" : [
+              "Crime",
+              "Drama",
+              "Romance"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BNjEzNjUzNzk0MF5BMl5BanBnXkFtZTgwMTYwODgwMzE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "summary" : "Street people Armand and Marie are madly in love, and she persuades Armand and other gang members to rob the home of Pierre Marcel, a wealthy scientist. The police break up the robbery but Pierre hides Armand from them because he kept a gang member from stabbing him, but Armand is wounded in doing so. When Armand regains his health, Pierre takes him around town and introduces him to many women, and Armand has no objections. Marie - jealous of the women - swears revenge on Marcel. They meet and he falls in love with her, and they are married while Armand is away in London. On their wedding night, Marie tells Marcel she is an Apache and her revenge is complete, and she rushes into Armand's arms. But another Apache, in love with Marie, wounds her with a gun shot.",
+            "actors" : [
+              "Clara Bow",
+              "Donald Keith",
+              "Lillian Leighton",
+              "J. Gordon Russell",
+              "Hazel Keener",
+              "Lou Tellegen",
+              "Jean De Briac",
+              "Otto Matieson",
+              "Alyce Mills",
+              "Julian Rivero"
+            ],
+            "year" : 1925
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "rUImbHYBdcQizbUJwz67",
+          "_score" : 1.0,
+          "_source" : {
+            "id" : 16473,
+            "link" : "http://www.imdb.com/title/tt0016473",
+            "title" : "The Unholy Three",
+            "score" : 7.3,
+            "genres" : [
+              "Crime",
+              "Drama",
+              "Romance"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA4NTQwMDg4MV5BMl5BanBnXkFtZTgwODAyMDU4MTE@._V1._CR23.883331298828125,0.5333404541015625,265,396_UX182_CR0,0,182,268_AL_.jpg",
+            "summary" : """A sideshow ventriloquist, midget, and strongman form a conspiracy known as "The Unholy Three" and commit a series of robberies.""",
+            "actors" : [
+              "Lon Chaney",
+              "Mae Busch",
+              "Matt Moore",
+              "Victor McLaglen",
+              "Harry Earles",
+              "Matthew Betz",
+              "Edward Connelly",
+              "William Humphrey",
+              "E. Alyn Warren",
+              "Margie Angus",
+              "Mary Angus",
+              "Violet N. Cane",
+              "Walter P. Cole",
+              "Carrie Daumery",
+              "Delmo Fritz",
+              "Alice Julian",
+              "Peter Kortes",
+              "Mickey McBan",
+              "John Merkyl",
+              "John Millerta",
+              "Louis Morrison",
+              "Marjorie Morton",
+              "Walter Perry",
+              "Louis Shank",
+              "Vera Vance",
+              "Carrie Clark Ward",
+              "Charles Wellesley",
+              "Percy Williams"
+            ],
+            "year" : 1925
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "r0ImbHYBdcQizbUJwz67",
+          "_score" : 1.0,
+          "_source" : {
+            "id" : 16481,
+            "link" : "http://www.imdb.com/title/tt0016481",
+            "title" : "Variety",
+            "score" : 7.6,
+            "genres" : [
+              "Crime",
+              "Drama",
+              "Romance"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ3ODk1OTA1NF5BMl5BanBnXkFtZTgwNzY4MjQ1MDI@._V1_UY268_CR12,0,182,268_AL_.jpg",
+            "summary" : """Prologue: The murderer "Boss" Huller - after having spent ten years in prison - breaks his silence to tell the warden his story. "Boss", a former trapeze artist, and his wife own a cheap side-show that displays ''erotic sensations''. But he longs for his former glamorous life in the circus. When he meets the orphan Berta-Marie, he falls under her spell and leaves his wife and young son behind. He makes Berta-Marie his partner in a new trapeze number. One day, the famous trapeze artist Artinelli takes note of them and engages them for his trapeze show in Berlin. Their salto mortale becomes an immediate sensation. Calculatedly and cold, Artinelli seduces Berta-Marie and destroys "Boss'" happiness.""",
+            "actors" : [
+              "Emil Jannings",
+              "Maly Delschaft",
+              "Lya De Putti",
+              "Warwick Ward",
+              "Alice Hechy",
+              "Georg John",
+              "Kurt Gerron",
+              "Paul Rehkopf",
+              "Charles Lincoln",
+              "Georg Baselt",
+              "Trude Hesterberg",
+              "Werner Krauss",
+              "The Flying Codonas",
+              "Alex Hyde and his Original New York Jazz Orchestra",
+              "Enrico Rastelli",
+              "Etelka Maquita"
+            ],
+            "year" : 1925
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "s0ImbHYBdcQizbUJwz67",
+          "_score" : 1.0,
+          "_source" : {
+            "id" : 16640,
+            "link" : "http://www.imdb.com/title/tt0016640",
+            "title" : "The Bells",
+            "score" : 6.6,
+            "genres" : [
+              "Crime",
+              "Drama",
+              "Horror"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BNzEzMzk5NzIwOF5BMl5BanBnXkFtZTcwMjAzNjMyMQ@@._V1_UY268_CR9,0,182,268_AL_.jpg",
+            "summary" : "An innkeeper murders a wealthy guest to pay off his debt, but his conscience will not allow him to get away with the crime so easily.",
+            "actors" : [
+              "Lionel Barrymore",
+              "Caroline Frances Cooke",
+              "Gustav von Seyffertitz",
+              "Lorimer Johnston",
+              "Eddie Phillips",
+              "Lola Todd",
+              "Laura La Varnie",
+              "Boris Karloff",
+              "E. Alyn Warren",
+              "Frank Austin",
+              "John George",
+              "Otto Lederer"
+            ],
+            "year" : 1926
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "tkImbHYBdcQizbUJwz67",
+          "_score" : 1.0,
+          "_source" : {
+            "id" : 16655,
+            "link" : "http://www.imdb.com/title/tt0016655",
+            "title" : "The Blackbird",
+            "score" : 6.8,
+            "genres" : [
+              "Crime",
+              "Drama",
+              "Romance"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQxMTA2NTgwM15BMl5BanBnXkFtZTgwMzYxMDU4MTE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "summary" : "Two thieves, the Blackbird and West End Bertie, fall in love with the same girl, a French nightclub performer named Fifi. Each man tries to outdo the other to win her heart.",
+            "actors" : [
+              "Lon Chaney",
+              "Owen Moore",
+              "Renée Adorée",
+              "Doris Lloyd",
+              "Andy MacLennan",
+              "William Weston",
+              "Sidney Bracey",
+              "Ernie Adams",
+              "Charles Avery",
+              "Lionel Belmore",
+              "Margaret Bert",
+              "Peggy Best",
+              "Louise Emmons",
+              "Willie Fung",
+              "Fred Gamble",
+              "Cecil Holland",
+              "Bertram Johns",
+              "Billy Mack",
+              "James T. Mack",
+              "Eric Mayne",
+              "Polly Moran",
+              "Frank Norcross",
+              "Eddie Sturgis"
+            ],
+            "year" : 1926
+          }
+        }
+      ]
+    },
+    "aggregations" : {
+      "films_per_year" : {
+        "doc_count_error_upper_bound" : 0,
+        "sum_other_doc_count" : 3647,
+        "buckets" : [
+          {
+            "key" : 2007,
+            "doc_count" : 192
+          },
+          {
+            "key" : 2008,
+            "doc_count" : 177
+          },
+          {
+            "key" : 2009,
+            "doc_count" : 169
+          },
+          {
+            "key" : 2013,
+            "doc_count" : 166
+          },
+          {
+            "key" : 2014,
+            "doc_count" : 162
+          },
+          {
+            "key" : 2012,
+            "doc_count" : 154
+          },
+          {
+            "key" : 2011,
+            "doc_count" : 152
+          },
+          {
+            "key" : 2010,
+            "doc_count" : 150
+          },
+          {
+            "key" : 2006,
+            "doc_count" : 146
+          },
+          {
+            "key" : 2002,
+            "doc_count" : 138
+          }
+        ]
+      }
+    }
+  }
+  

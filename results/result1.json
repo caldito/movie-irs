@@ -1,0 +1,400 @@
+{
+    "took" : 15,
+    "timed_out" : false,
+    "_shards" : {
+      "total" : 1,
+      "successful" : 1,
+      "skipped" : 0,
+      "failed" : 0
+    },
+    "hits" : {
+      "total" : {
+        "value" : 2585,
+        "relation" : "eq"
+      },
+      "max_score" : 44.16162,
+      "hits" : [
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "qEImbHYBdcQizbUJw2fI",
+          "_score" : 44.16162,
+          "_source" : {
+            "id" : 86590,
+            "link" : "http://www.imdb.com/title/tt0086590",
+            "title" : "The Wind in the Willows",
+            "score" : 7.9,
+            "genres" : [
+              "Animation",
+              "Adventure",
+              "Family"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMTI4MDAzMzE0MF5BMl5BanBnXkFtZTcwMTg3MDIzMQ@@._V1_UY268_CR4,0,182,268_AL_.jpg",
+            "summary" : "Toad (David Jason), Rat (Ian Carmichael), Mole (Richard Pearson), and Badger (Sir Michael Hordern) follow animal etiquette in this version of Kenneth Grahame's classic, in stop-motion model animation.",
+            "actors" : [
+              "Richard Pearson",
+              "Ian Carmichael",
+              "David Jason",
+              "Michael Hordern",
+              "Beryl Reid",
+              "Jonathan Cecil",
+              "Edward Kelsey",
+              "Una Stubbs",
+              "Brian Trueman",
+              "Alan Bardsley"
+            ],
+            "year" : 1983
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "O0ImbHYBdcQizbUJw3XL",
+          "_score" : 39.647194,
+          "_source" : {
+            "id" : 107745,
+            "link" : "http://www.imdb.com/title/tt0107745",
+            "title" : "Once Upon a Forest",
+            "score" : 6.5,
+            "genres" : [
+              "Animation",
+              "Adventure",
+              "Drama"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUyMzM3Mjk0N15BMl5BanBnXkFtZTcwNTMwNDAzMQ@@._V1_UY268_CR1,0,182,268_AL_.jpg",
+            "summary" : "A young mouse, mole and hedgehog risk their lives to find a cure for their badger friend, who's been poisoned by men.",
+            "actors" : [
+              "Michael Crawford",
+              "Ben Vereen",
+              "Ellen Blain",
+              "Benji Gregory",
+              "Paige Gosney",
+              "Elisabeth Moss",
+              "Paul Eiding",
+              "Janet Waldo",
+              "Susan Silo",
+              "Will Estes",
+              "Charlie Adler",
+              "Rickey D'Shon Collins",
+              "Angel Harper",
+              "Don Reed",
+              "Robert David Hall",
+              "Benjamin Kimball Smith",
+              "Haven Hartman",
+              "Florence Warner",
+              "William Windom"
+            ],
+            "year" : 1993
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "60ImbHYBdcQizbUJw6fT",
+          "_score" : 31.905125,
+          "_source" : {
+            "id" : 937397,
+            "link" : "http://www.imdb.com/title/tt0937397",
+            "title" : "Hammy's Boomerang Adventure",
+            "score" : 6.3,
+            "genres" : [
+              "Animation",
+              "Short",
+              "Comedy"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BN2Q2MTUxYzYtOWZmNy00NDdmLWIzMDgtMmEyMjkyOTJhYTczXkEyXkFqcGdeQXVyNjIzODI5OTQ@._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "summary" : "RJ the raccoon produces a nature video, which turns out to be an excuse for him and the porcupine children to play pranks on Hammy the squirrel.",
+            "actors" : [
+              "Bruce Willis",
+              "Garry Shandling",
+              "Steve Carell",
+              "Wanda Sykes",
+              "Sami Kirkpatrick",
+              "Shane Baumel",
+              "Madison Davenport"
+            ],
+            "year" : 2006
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "hkImbHYBdcQizbUJw9Ha",
+          "_score" : 29.282097,
+          "_source" : {
+            "id" : 3401748,
+            "link" : "http://www.imdb.com/title/tt03401748",
+            "title" : "Oddball",
+            "score" : 6.4,
+            "genres" : [
+              "Adventure",
+              "Family"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BODYxNTk2MjYzMF5BMl5BanBnXkFtZTgwMjcxMjY4NjE@._V1_UY268_CR3,0,182,268_AL_.jpg",
+            "summary" : "An eccentric chicken farmer, with the help of his granddaughter, trains his mischievous dog Oddball to protect a penguin sanctuary from fox attacks in an attempt to reunite his family and save their seaside town.",
+            "actors" : [
+              "Shane Jacobson",
+              "Sarah Snook",
+              "Alan Tudyk",
+              "Coco Jack Gillies",
+              "Richard Davies",
+              "Deborah Mailman",
+              "Kai",
+              "Tegan Higginbotham",
+              "Meeko",
+              "Chip",
+              "Dave Lawson",
+              "Edith",
+              "Stinky",
+              "Frank Woodley",
+              "Terry Camilleri",
+              "John Leary",
+              "Jason Geary",
+              "Stephen Kearney",
+              "Eloise Oxer",
+              "Jarrod Leitch",
+              "Lauren Dodge",
+              "Beau Hurren",
+              "Chris Weir",
+              "Ben Morieson",
+              "Clay Dunn",
+              "Shoko Asano",
+              "Jaffa",
+              "Jackson",
+              "Jonah",
+              "July",
+              "Allie",
+              "Bear",
+              "Foley",
+              "Rita",
+              "Charlie",
+              "Shazza"
+            ],
+            "year" : 2015
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "J0ImbHYBdcQizbUJw4bN",
+          "_score" : 28.781384,
+          "_source" : {
+            "id" : 192802,
+            "link" : "http://www.imdb.com/title/tt0192802",
+            "title" : "The Wind in the Willows",
+            "score" : 7.7,
+            "genres" : [
+              "Animation",
+              "Family"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMTM4OTA0OTYxOF5BMl5BanBnXkFtZTcwMzI0ODAyMQ@@._V1_UY268_CR1,0,182,268_AL_.jpg",
+            "summary" : """When three tight friends Mole "Alan Bennett", Ratty "Sir Michael Palin", and Badger "Sir Michael Gambon", find out that the infamous Mr. Toad "Rik Mayall" of Toad Hall has been up to no good, they must find him and change his ways for good.""",
+            "actors" : [
+              "Alan Bennett",
+              "Michael Palin",
+              "Michael Gambon",
+              "Rik Mayall",
+              "James Villiers",
+              "Emma Chambers",
+              "Judy Cornwell",
+              "Enn Reitel",
+              "David Sinclair",
+              "Mark Lockyer",
+              "Vanessa Redgrave",
+              "Jemima Ffyne",
+              "Jordan Hollywood",
+              "Tom Stourton",
+              "Barry Foster"
+            ],
+            "year" : 1995
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "OUImbHYBdcQizbUJw8zZ",
+          "_score" : 28.312262,
+          "_source" : {
+            "id" : 2664910,
+            "link" : "http://www.imdb.com/title/tt02664910",
+            "title" : "Nyuszi ̩s ��z",
+            "score" : 8.5,
+            "genres" : [
+              "Animation",
+              "Short",
+              "Adventure"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMjM2Nzk2MTQwNV5BMl5BanBnXkFtZTgwMTE3Nzc1MjE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "summary" : "The friendship of Rabbit and Deer is put to the test by Deer's new obsession to find the formula for the 3rd dimension...",
+            "actors" : [
+              "Dániel Czupi",
+              "Adrienn Mórocz"
+            ],
+            "year" : 2013
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "tUImbHYBdcQizbUJw4TN",
+          "_score" : 28.12827,
+          "_source" : {
+            "id" : 176198,
+            "link" : "http://www.imdb.com/title/tt0176198",
+            "title" : "The Shadow of the Ferns",
+            "score" : 6.9,
+            "genres" : [
+              "Crime",
+              "Drama"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BY2NlMzQyYTktNGM2Yi00MzQyLWExYzEtNWFiMmUwNDA1ZWQ3XkEyXkFqcGdeQXVyMjIxMzMyMQ@@._V1_UY268_CR4,0,182,268_AL_.jpg",
+            "summary" : "After a murder of a gamekeeper who catches them red-handed having just downed a deer, two teenage boys, conceited Ruda (Marek Probosz) and shy Václav (Zbigniew Suszynski) go on the run through the woods.",
+            "actors" : [
+              "Marek Probosz",
+              "Zbigniew Suszynski",
+              "Miroslav Machácek",
+              "Frantisek Peterka",
+              "Josef Patocka",
+              "Vladimír Hlavatý",
+              "Marie Jezková",
+              "Oldrich Velen",
+              "Vítezslav Jandák",
+              "Petr Skarke",
+              "Jaroslav Tomsa",
+              "Marta Vancurová",
+              "Emma Cerná",
+              "Jana Svandová",
+              "Jirí Schmitzer",
+              "Zdenka Sajfertová",
+              "Slávka Hamouzová",
+              "Zofie Kanyzová-Veselá",
+              "Jorga Kotrbová",
+              "Michal Pavlata",
+              "Jana Riháková",
+              "Eva Sitteová",
+              "Josef Vondrácek",
+              "Vlastimil Zavrel"
+            ],
+            "year" : 1986
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "aEImbHYBdcQizbUJw5jQ",
+          "_score" : 27.194279,
+          "_source" : {
+            "id" : 400717,
+            "link" : "http://www.imdb.com/title/tt0400717",
+            "title" : "Open Season",
+            "score" : 6.2,
+            "genres" : [
+              "Animation",
+              "Adventure",
+              "Comedy"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwOTg2MjU0OV5BMl5BanBnXkFtZTcwMzIzNTQzMQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "summary" : "Boog, a domesticated 900lb. Grizzly bear, finds himself stranded in the woods 3 days before Open Season. Forced to rely on Elliot, a fast-talking mule deer, the two form an unlikely friendship and must quickly rally other forest animals if they are to form a rag-tag army against the hunters.",
+            "actors" : [
+              "Martin Lawrence",
+              "Ashton Kutcher",
+              "Gary Sinise",
+              "Debra Messing",
+              "Billy Connolly",
+              "Georgia Engel",
+              "Jon Favreau",
+              "Jane Krakowski",
+              "Gordon Tootoosis",
+              "Patrick Warburton",
+              "Cody Cameron",
+              "Nika Futterman",
+              "Danny Mann",
+              "Jack McGee",
+              "Michelle Murdocca",
+              "Fergal Reilly",
+              "Maddie Taylor",
+              "Kirk Baily",
+              "Jack Blessing",
+              "Ranjani Brow",
+              "David Cowgill",
+              "Caitlin Cutt",
+              "Elisa Gabrielli",
+              "Jackie Gonneau",
+              "Wendy Hoffman",
+              "Scott Menville",
+              "Renee Robert",
+              "André Sogliuzzo",
+              "John Hans Tester",
+              "Aria Noelle Curzon"
+            ],
+            "year" : 2006
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "wkImbHYBdcQizbUJw1vG",
+          "_score" : 27.19274,
+          "_source" : {
+            "id" : 69544,
+            "link" : "http://www.imdb.com/title/tt0069544",
+            "title" : "Zolotye roga",
+            "score" : 7.1,
+            "genres" : [
+              "Family",
+              "Fantasy"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU0MTQ2OTYyN15BMl5BanBnXkFtZTgwMzYyNTYxMjE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "summary" : "A long time ago a splendid deer with golden antlers lived in the woods, always protecting the poor and weak and disdaining evil. In a little village nearby the woods widow Yevdokya lived with her twin daughters Mashenka and Dashenka, her son and her old father. One day the girls observe robbers hunting the deer. Shortly after they are lured into the woods by forest spirits. Infuriated about their presence, witch Baba Yaga turns them into fawns. Meanwhile, Yevdokya searches for her daughters. For protecting the deer of robbers she gets a magical ring to protect her from danger. The deer advises her to set off to the red sun or the clear moon. But both cannot reach the magic woods with their light. Finally, the boy accompanied by his cat goes in search for sisters and mother.",
+            "actors" : [
+              "Georgiy Millyar",
+              "Aleksei Smirnov",
+              "Raisa Ryazanova",
+              "Volodya Belov",
+              "Ira Tchigrinova",
+              "Lena Tchigrinova",
+              "Yuri Kharchenko",
+              "I. Baida",
+              "Anatoli Gorbachyov",
+              "Mikhail Pugovkin",
+              "Vera Altayskaya",
+              "Aleksandr Khvylya",
+              "Margarita Korabelnikova",
+              "Saveliy Kramarov",
+              "Lev Potyomkin",
+              "Boris Sichkin",
+              "Zoya Tolbuzina",
+              "Roman Yurev-Lunts",
+              "Anastasiya Zueva"
+            ],
+            "year" : 1973
+          }
+        },
+        {
+          "_index" : "films",
+          "_type" : "_doc",
+          "_id" : "60ImbHYBdcQizbUJw3zM",
+          "_score" : 26.98804,
+          "_source" : {
+            "id" : 119107,
+            "link" : "http://www.imdb.com/title/tt0119107",
+            "title" : "Fast, Cheap & Out of Control",
+            "score" : 7.3,
+            "genres" : [
+              "Documentary"
+            ],
+            "poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyMTQ4OTg3NF5BMl5BanBnXkFtZTcwNzE3NDIyMQ@@._V1_UY268_CR0,0,182,268_AL_.jpg",
+            "summary" : "An exploration of the careers of four unrelated professionals: a lion tamer, a robotics expert, a topiary gardener, and a naked mole rat specialist.",
+            "actors" : [
+              "Dave Hoover",
+              "George Mendonça",
+              "Raymond A. Mendez",
+              "Rodney Brooks"
+            ],
+            "year" : 1997
+          }
+        }
+      ]
+    }
+  }
+  
